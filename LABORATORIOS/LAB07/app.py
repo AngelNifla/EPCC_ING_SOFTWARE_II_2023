@@ -36,9 +36,6 @@ def Login():
         
         correo = request.form['typeEmailX']
         password = request.form['typePasswordX']
-        # curl = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-        # curl.execute("SELECT * FROM usuario WHERE =%s",[correo])
-        # user = curl.fetchone()
         users=requests.post("http://127.0.0.1:5000/api/ponente/get_all").json()
         print(users)
         user={}
